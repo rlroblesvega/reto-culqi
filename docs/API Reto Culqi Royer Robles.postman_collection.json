@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "6e472ef3-2385-42b7-a2a5-ea815ede472e",
+		"name": "API Reto Culqi Royer Robles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4275847"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Generar Token User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"RoblesVegaSAC\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/merchant/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"merchant",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar Token User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvYmxlc1ZlZ2FTQUMiLCJpYXQiOjE3MDg1NTA5MTksImV4cCI6MTcwODU1MDk3OX0.1DhqfUEhag_rEQNJ7B40QcQEGjGRI82IQzSEwMdPWJ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john\",\r\n    \"password\": \"changeme\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/merchant/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"merchant",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Create Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvYmxlc1ZlZ2FTQUMiLCJpYXQiOjE3MDg1NTEzMjYsImV4cCI6MTcwODU1MTM4Nn0.4aF5sb-bdmjWx59fTg8k2pnT7ar7BBVJPn2sdUL-E2I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"card_number\": \"5118420413040344\",\r\n    \"cvv\": \"7643\",\r\n    \"expiration_month\": \"1\",\r\n    \"expiration_year\": \"2024\",\r\n    \"email\": \"royerleandroroblesvega@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/tokens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Tokens",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvYmxlc1ZlZ2FTQUMiLCJpYXQiOjE3MDg1MDM2MzEsImV4cCI6MTcwODUwNzIzMX0.dJXJrU_4J1Y9eZnD0Hy5aurt1ey_S5Gcl_bGLFJxOig",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/tokens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search By Token",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvYmxlc1ZlZ2FTQUMiLCJpYXQiOjE3MDg1NTE0ODgsImV4cCI6MTcwODU1MTU0OH0.hMFJGi7QGTPp1wmg9C-Ln-Su8zdiQs_X8qDK5M7Q4Pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXJkX251bWJlciI6IjUxMTg0MjA0MTMwNDAzNDQiLCJjdnYiOiI3NjQzIiwiZXhwaXJhdGlvbl9tb250aCI6IjEiLCJleHBpcmF0aW9uX3llYXIiOiIyMDI0IiwiZW1haWwiOiJyb3llcmxlYW5kcm9yb2JsZXN2ZWdhQGdtYWlsLmNvbSIsImlhdCI6MTcwODU1MTMzOSwiZXhwIjoxNzA4NTUxMzk5fQ.SbiaI1jQ9byFZqSkbBsuLqTwf2tZr-95r61OTOsCM_k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/tokens/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"tokens",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

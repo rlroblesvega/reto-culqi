@@ -27,9 +27,5 @@ export class TokensController {
   async search(@Body() searchTokenDto: SearchTokenDto) {
     return await this.tokensService.findOneToken(searchTokenDto.token);
   }
-
-  @Delete(':id')
-  async delete(@Param('id') id: string) {
-    return this.tokensService.delete(id);
-  }
+  
 }

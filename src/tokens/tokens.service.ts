@@ -28,18 +28,14 @@ export class TokensService {
     return this.tokenModel.findOne({ _id: id }).exec();
   }
 
-  async findOneToken(token: string): Promise<Token> {
-    //Remove cvv before response data
-    //Manejar una excepción en caso ya no se encuentre el token
-    // return this.tokenModel.findOne({ token: token }).exec();
+  async findOneToken(token: string): Promise<any> {
+    const foundToken = await this.tokenModel.findOne({ token: token }).select('-cardData.cvv').exec();
+    
+    if (!foundToken) {
+      throw new HttpException('Token expirado, genere un nuevo token', HttpStatus.FORBIDDEN);
+    }
 
-    throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
+    return foundToken;
   }
 
-  async delete(id: string) {
-    const deletedCat = await this.tokenModel
-      .findByIdAndRemove({ _id: id })
-      .exec();
-    return deletedCat;
-  }
 }

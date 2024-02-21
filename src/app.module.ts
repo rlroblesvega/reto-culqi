@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.merchant.module';
-import { TokensModule } from './cats/tokens.module';
+import { TokensModule } from './tokens/tokens.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({

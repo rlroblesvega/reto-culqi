@@ -1,13 +1,9 @@
-### Mongoose sample
+### Reto Culqi Royer Robles - NestJS
 
 ### Installation
 
 
 `npm install`
-
-### Running
-
-This example requires docker or a local mongodb installation.  If using a local mongodb, see `app.module.ts` for connection options, and make sure there are matching options for the mongodb installation and the source code.
 
 #### Docker
 
@@ -21,18 +17,18 @@ After running the sample, you can stop the Docker container with
 
 ### Run App
 
-Then, run Nest as usual:
+Then, run:
 
 `npm run start`
 
 ### Run Tests
 
-Then, run Nest as usual:
+Then, run:
 
 `npm run test`
 
 ### Run Build
 
-Then, run Nest as usual:
+Then, run:
 
 `npm run build`

@@ -1,5 +1,5 @@
 {
-  "name": "auth-sample",
+  "name": "reto-culqi",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -27,6 +27,7 @@
     "@nestjs/passport": "10.0.3",
     "@nestjs/platform-express": "10.3.2",
     "@nestjs/swagger": "^7.3.0",
+    "@types/chai": "^4.3.11",
     "class-validator": "0.14.1",
     "mongoose": "8.0.1",
     "nestjs-joi": "^1.10.0",
@@ -44,6 +45,7 @@
     "@types/supertest": "2.0.16",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
+    "chai": "^5.1.0",
     "eslint": "8.42.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
